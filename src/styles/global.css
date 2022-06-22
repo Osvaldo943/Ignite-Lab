@@ -1,21 +1,96 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  outline: none;
 }
 body {
+  font-family: Roboto, sans-serif;
   background: #09090a ;
   color: #e1e1e6;
+  -webkit-font-smoothing: antialiased;
 }
 .header {
   width: 100%;
   padding: 1.25rem 0;
+  
   background: #121214;
+  border-bottom: 1px solid #323238 !important;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #29292e;
+}
+.container-general {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main-general {
+  display: flex;
+  flex: 1;
+}
+.video {
+  display: flex;
+  flex: 1;
+}
+.sidebar {
+  width: 348px;
+  background: #121214 ;
+  padding: 6px;
+  border-left: 1px solid #29292e;
+}
+.sidebar span.cronograma {
+  display: block;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  font-weight: bold;
+  font-size: 24px;
+  border-bottom:1px solid #323238 ;
+}
+
+.sidebar .list-lessons {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.frame-class{
+  color: #e1e1e6; 
+  text-decoration: none;
+}
+.frame-class span.one {
+  color: #8d8d99;
+  font-weight: normal;
+  font-size: 14px;
+}
+.frame-class span.two {
+  font-size: 14px;
+  font-weight: medium;
+  color: #81D8F7;
+}
+.frame-class span.three {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight:  bold;
+  border: 1px solid #00B37E;
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+.frame-class strong {
+  color: #C4C4CC;
+  font-size: 16px;
+  display: block;
+  margin: 10px 0;
+}
+.frame-class div {
+  border: 1px solid  #323238;
+  border-radius: 4px;
+  padding: 16px;
+  margin-top: 2px;
+}
+.frame-class div  header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
