@@ -1,13 +1,35 @@
-export function Lesson(){
+import {isPast, format} from "date-fns"
+import ptBR from "date-fns/locale/pt-BR"
+
+interface LessonProps {
+  title: string;
+  slug: string;
+  availableAt: Date;
+  type: 'live'|'class';
+}
+
+export function Lesson(props: LessonProps){
+  const IsLessonAvailable = isPast(props.availableAt);
+  const availableDateFormatted = format(props.availableAt, "EEEE' • 'd' de 'MMMM' • 'k'h'mm",{
+    locale: ptBR,
+  })
   return(
     <a href="" className="frame-class">
-      <span className="one">Segunda • 21 de junho • 19h00</span>
+      <span className="one">{props.availableAt.toString()}</span>
       <div>
         <header>
-          <span className="two">Conteúdo liberado</span>
-          <span className="three">AO VIVO</span>
+          {IsLessonAvailable ? (
+           <span className="two">
+              Conteúdo liberado
+            </span>
+          ) :  (
+            <span className="two">
+              Em breve
+            </span>
+          )}
+          <span className="three">{props.type === 'live' ? 'AO VIVO' : 'AULA PRÁTICA'} </span>
         </header>
-        <strong>Abertura do Ignite Lab</strong>
+        <strong>{props.title}</strong>
       </div>
     </a>
   )
