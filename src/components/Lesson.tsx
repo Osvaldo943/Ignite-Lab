@@ -23,12 +23,12 @@ export function Lesson(props: LessonProps){
         <header>
           {IsLessonAvailable ? (
            <span className="two">
-              <CheckCircle />
+              <CheckCircle size={20} />
               Conteúdo liberado
             </span>
           ) :  (
             <span className="two">
-              <Lock />
+              <Lock size={20} />
               Em breve
             </span>
           )}
