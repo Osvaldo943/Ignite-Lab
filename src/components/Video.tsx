@@ -36,14 +36,16 @@ interface VideoProps {
 }
 
 export function Video(props: VideoProps){
-  const {data} = useQuery(GET_LESSON_BY_SLUG_QUERY, {
+  const {data} = useQuery<LessonProps>(GET_LESSON_BY_SLUG_QUERY, {
     variables: {
       slug: props.lessonSlug,
     }
   } )
   console.log(data)
   if(!data){
-    <p>Carregando....</p>
+    <div style={{display: 'flex'}}>
+      <p>Carregando....</p>
+    </div>
   }
 
   return(
@@ -51,7 +53,7 @@ export function Video(props: VideoProps){
       <div className="video-container-black">
         <div className="video-content"> 
           <Player>
-            <Youtube videoId="Ox_zb2cs9zM"/>
+            <Youtube videoId={`${data?.lesson.videoId}`} />
             <DefaultUi />
           </Player>
         </div>
@@ -60,14 +62,14 @@ export function Video(props: VideoProps){
         <div className="title-desc">
           
           <div className="text-desc">
-            <h1>Aula 01 -Abertura do Ignite-Lab</h1>
-            <p>Nessa aula vamos dar início ao projeto criando a estrutura base da aplicação utilizando ReactJS, Vite e TailwindCSS. Vamos também realizar o setup do nosso projeto no GraphCMS criando as entidades da aplicação e integrando a API GraphQL gerada pela plataforma no nosso front-end utilizando Apollo Client.</p>
+            <h1>{data?.lesson.title}</h1>
+            <p>{data?.lesson.description}</p>
             
             <div className="video-teacher">
-              <img src="https://github.com/Osvaldo943.png" alt="" />
+              <img src={data?.lesson.teacher.avatarURL} alt="" />
               <div className="leading-relaxed">
-                <strong>Osvaldo de Sousa</strong>
-                <span>Web Developer in Dline-Code</span>
+                <strong>{data?.lesson.teacher.name} </strong>
+                <span>{data?.lesson.teacher.bio} </span>
               </div>
             </div>
 
