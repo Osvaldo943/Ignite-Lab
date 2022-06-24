@@ -58,16 +58,24 @@ body {
 .frame-class{
   color: #e1e1e6; 
   text-decoration: none;
+  margin: 8px 0 0; 
 }
 .frame-class span.one {
   color: #8d8d99;
   font-weight: normal;
   font-size: 14px;
 }
-.frame-class span.two {
+.frame-class span.two, .frame-class span.two-two {
   font-size: 14px;
   font-weight: medium;
   color: #81D8F7;
+
+  display: flex;
+  justify: right;
+  align-items: center;
+}
+.frame-class span.two-two {
+  color: orange;
 }
 .frame-class span.three {
   color: #ffffff;
