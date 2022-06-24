@@ -62,14 +62,14 @@ export function Video(props: VideoProps){
         <div className="title-desc">
           
           <div className="text-desc">
-            <h1>{data?.lesson.title}</h1>
-            <p>{data?.lesson.description}</p>
+            <h1>{data?.lesson.title || "Sem internet..."}</h1>
+            <p>{data?.lesson.description || "Aqui descrevermos o vídeo que será selecionado assim quando tiver internet pois é uma obigação teres internet para acessar os conteúdos que se encontram na nossa plataforma"}</p>
             
             <div className="video-teacher">
               <img src={data?.lesson.teacher.avatarURL} alt="" />
               <div className="leading-relaxed">
-                <strong>{data?.lesson.teacher.name} </strong>
-                <span>{data?.lesson.teacher.bio} </span>
+                <strong>{data?.lesson.teacher.name || "Nome do professor"} </strong>
+                <span>{data?.lesson.teacher.bio || "Bio do Professor"} </span>
               </div>
             </div>
 
