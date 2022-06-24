@@ -157,15 +157,16 @@ body {
   align-items: flex-start;
   gap: 16;
 }
-.video .video-rest   .title-desc  h1 {
+.video .video-rest   .title-desc .text-desc  h1 {
   font-size: 24px;
   font-weight: bold;
   color: #C4C4CC;
 }
-.video .video-rest   .title-desc  p {
-    margin-top: 12px;
+.video .video-rest   .text-desc  {
+  width: 70%;
+  margin-top: 12px;
   color: #C4C4CC;
-}
+} 
 .video .video-rest   .title-desc a {
   padding: 16px;
   font-size: 14px ;
