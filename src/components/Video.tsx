@@ -1,9 +1,51 @@
 import {CaretRight, DiscordLogo, FileArrowDown, Lightning} from "phosphor-react"
+import { gql, useQuery } from "@apollo/client";
 import {DefaultUi, Player, Youtube} from "@vime/react"
 
 import '@vime/core/themes/default.css'
 
-export function Video(){
+const GET_LESSON_BY_SLUG_QUERY = gql`
+  query GetLessonBySlug($slug:String) {
+  lesson(where: {slug: $slug}) {
+    title
+    videoId
+    description
+    teacher {
+      name
+      bio
+      avatarURL
+    }
+  }
+}
+`
+
+interface LessonProps {
+  lesson: {
+    title: string;
+    videoId: string;
+    description: string;
+    teacher : {
+      name: string;
+      bio: string;
+      avatarURL: string;
+    }
+  }
+}
+interface VideoProps {
+  lessonSlug: string;
+}
+
+export function Video(props: VideoProps){
+  const {data} = useQuery(GET_LESSON_BY_SLUG_QUERY, {
+    variables: {
+      slug: props.lessonSlug,
+    }
+  } )
+  console.log(data)
+  if(!data){
+    <p>Carregando....</p>
+  }
+
   return(
     <div className="video">
       <div className="video-container-black">
