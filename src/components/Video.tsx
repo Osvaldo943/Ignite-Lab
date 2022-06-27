@@ -69,7 +69,7 @@ export function Video(props: VideoProps){
                 <strong>{data?.lesson.teacher.name || "Nome do professor"}</strong>
                 <span>{data?.lesson.teacher.bio || "Bio do professor"}</span>
               </div>
-            </div>
+            </div> 
 
           </div>
 
