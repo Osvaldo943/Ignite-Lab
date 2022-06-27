@@ -135,6 +135,19 @@ a {
   align-items: center;
   justify-content: space-between;
 }
+
+.active-lesson div{
+  background: #00875F;
+}
+.active-lesson span.three {
+  color: #ffffff !important;
+}
+.active-lesson span.two {
+  color: #ffffff !important;
+}
+.active-lesson span.three {
+  border-color: #ffffff !important;
+}
 //Edição para vídeo 
 .video {
   flex: 1;
@@ -379,6 +392,9 @@ a {
  }
  .subscribe   .form-subsccribe button:hover {
     background: #015F43;
+ }
+ .subscribe   .form-subsccribe button:disabled {
+  opacity: 50%;
  }
  .subscribe  img { 
   width: 100%;
