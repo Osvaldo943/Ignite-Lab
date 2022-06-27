@@ -293,3 +293,93 @@ a {
   display: flex;
   align-items: center;
  }
+
+ .subscribe {
+  min-height: 100vh;
+  background: url("../assets/blur 2 2.png") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+ }
+ .subscribe .hero-subscribe{
+  width: 100%;
+  max-width: 1100px;
+  margin: auto ;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 5rem;
+ }
+ .subscribe .text-side-subscribe {
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+ }
+ .subscribe .logo-subscribe {
+  margin-left: -45px;
+ }
+ .subscribe .text-side-subscribe h1 {
+  margin-top:  2rem;
+  font-size: 2.5rem;
+  font-weight: normal;
+  line-height: 1.25;
+ } 
+ .subscribe .text-side-subscribe strong {
+  color: #81D8F7
+ }
+ .subscribe .text-side-subscribe p {
+  margin-top: 24px;
+  color: #C4C4CC;
+  line-height: 1.625;
+ }
+ .subscribe .form-subsccribe {
+  padding: 32px;
+  background: #121214;
+  border: 1px solid #29292E;
+  border-radius: 4px;
+ }
+ .subscribe .form-subsccribe strong {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  color:;
+ }
+ .subscribe   .form-subsccribe form{
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+ }
+ .subscribe   .form-subsccribe input{
+  height: 3rem;
+  width: 100%;
+  background: #09090A;
+  color: #ffffff;
+  border-radius: 4px;
+  padding:  0 1.25rem;
+  height: ;
+  border: 1px solid transparent;
+ }
+ .subscribe   .form-subsccribe button  {
+  width: 100%;
+  color: #ffffff;
+  background: #00B37E ;
+  border-radius: 4px;
+  border:1px solid transparent;
+  padding: 1rem 0;
+  margin-top: 1rem/* 16px */;
+  cursor: pointer;
+  transition: all .2s ease-in;
+ }
+ .subscribe   .form-subsccribe button:hover {
+    background: #015F43;
+ }
+ .subscribe  img { 
+  width: 100%;
+ }
