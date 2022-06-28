@@ -17,8 +17,8 @@ export function Lesson(props: LessonProps){
     locale: ptBR,
   })
   const {slug} = useParams<{slug: string}>();
-
   const isActiveLesson = slug === props.slug;
+  
   return(
     <Link to={`/event/lesson/${props.slug}`} className={`frame-class ${isActiveLesson? "active-lesson": ""}`}>
       <span className="one">{availableDateFormatted.toString()}</span>
