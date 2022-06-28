@@ -47,7 +47,6 @@ export function Subscribe(){
         </form>
       </div>
       </div>
-     
       <div>
         <img src={codeGroup} alt="" />
       </div>
