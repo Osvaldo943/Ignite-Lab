@@ -27,7 +27,6 @@ export function Sidebar(){
   return(
     <aside className="sidebar">
       <span className="cronograma">Cronograma de aulas</span>
-
       <div className="list-lessons">
        {data?.lessons.map(lesson => {
         return(

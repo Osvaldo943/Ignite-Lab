@@ -12,7 +12,10 @@ export function Event(){
       <main className="main-general">
           {slug
           ? <Video lessonSlug={slug} /> 
-          : <div style={{flex: 1}}>Selecione um vídeo por favor</div>
+          : <div className="event-without-net" style={{flex: 1}}>
+                <h1>Selecione um vídeo, por favor</h1>
+                <p>Event sem vídeo selecionado</p>
+            </div>
           }
           <Sidebar />
       </main>

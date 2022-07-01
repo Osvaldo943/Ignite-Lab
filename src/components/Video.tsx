@@ -1,7 +1,6 @@
 import {CaretRight, DiscordLogo, FileArrowDown, Lightning} from "phosphor-react"
 import { gql, useQuery } from "@apollo/client";
 import {DefaultUi, Player, Youtube} from "@vime/react"
-
 import '@vime/core/themes/default.css'
 
 const GET_LESSON_BY_SLUG_QUERY = gql`
@@ -58,11 +57,9 @@ export function Video(props: VideoProps){
       </div>
       <div className="video-rest">
         <div className="title-desc">
-          
           <div className="text-desc">
             <h1>{data?.lesson.title || "Iítulo | Sem internet...."}</h1>
-            <p>{data?.lesson.description || "A descrição do vídeo vai ficar aqui quando o senhhor possui acesso a interne pois todo sistema online precisa de internet"}</p>
-            
+            <p>{data?.lesson.description || "A descrição do vídeo vai ficar aqui quando o senhhor possui acesso a interne pois todo sistema online precisa de internet"}</p>            
             <div className="video-teacher">
               <img src={data?.lesson.teacher.avatarURL} alt="Teacher" />
               <div className="leading-relaxed">
@@ -70,15 +67,12 @@ export function Video(props: VideoProps){
                 <span>{data?.lesson.teacher.bio || "Bio do professor"}</span>
               </div>
             </div> 
-
           </div>
-
           <div>
             <a href="" className=""><i><DiscordLogo /> </i> Comunidade do Discord</a>
             <a href="" className="challenge-link"><i><Lightning /> </i> Comunidade do Discord</a>
           </div>
          </div>
-
          <div className="additional-material">
           <a href="">
             <div className="first-additional-material">
