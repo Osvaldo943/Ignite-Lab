@@ -1,9 +1,11 @@
 import { Barbell, EyedropperSample, GithubLogo, LinkedinLogo } from "phosphor-react"
+import {Header} from "../components/Header"
 import AvatarProfile from "../assets/avatar-profile.jpg"
 
 export function DevProfile(){
   return(
     <div className="dev-profile">
+      <Header />
       <div className="container">
         <div className="left-profile">
           <div className="image-profile">
@@ -36,7 +38,17 @@ export function DevProfile(){
             </li>
           </ul>
         </div>
-        <div className="right-profile">Left side</div>
+        <div className="right-profile">
+          <div className="dev-desc-profile">
+            <p>Left sideLeft sideLeft sideLeft sideLeft sideLeft sideLeft sideLeft sideLeft sideLeft sideLeft sideLeft sideLeft sideLeft sideLeft sideLeft sideLeft sideLeft side</p>
+          </div>
+          <ul className="dev-carroussels-skills">
+            <li>Icon</li>
+            <li>Icon</li>
+            <li>Icon</li>
+            <li>Icon</li>
+          </ul>
+        </div>
       </div>
     </div>
   )
