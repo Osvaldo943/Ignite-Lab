@@ -408,7 +408,7 @@ a {
   justify-content: space-between;
 }
 .dev-profile .container .left-profile {
-  width: 30%;
+  width: 25%;
   max-height: 87vh;
   min-height: 87vh;
   overflow: auto;
@@ -442,13 +442,32 @@ a {
   padding: 0 15px;
 }
 .dev-profile .container .left-profile li {
+  position: relative;
   display: flex;
-  padding: 2px 0;
+  flex-direction: column;
+  padding: 5px 0;
+}
+.dev-profile .container .left-profile li::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height:1px;
+  width: 0;
+  bottom: 3px;
+  background: #00B37E;
+  transition: all .3s ease-in;
+}
+.dev-profile .container .left-profile li:hover::after{
+  width: 100%;
+}.dev-profile .container .left-profile li:hover > a {
+  color: #00B37E;
 }
 .dev-profile .container .left-profile li a {
   display: flex;
   padding: 5px 0;
 }
+
 .dev-profile .container .left-profile li a span {
   font-size: 16px;
   margin-right: 8px;
@@ -459,11 +478,14 @@ a {
 }
 .dev-profile .container .right-profile {
   width: 80%;
+  height: 87vh;
+  overflow: auto;
   display: flex;
   flex-direction: column;
 } 
 .dev-profile .container .right-profile .dev-desc-profile {
   min-height: 208px;
+  margin-bottom: 30px;
   border-bottom: 1px solid #323238;
   padding: 15px 30px;
   box-shadow: 1px 1px 4px black;
@@ -486,4 +508,49 @@ a {
 }
 .dev-profile .dev-contact  span {
   color: #8D8D99;
+}
+.dev-skills{
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+.dev-skills p {
+  margin-bottom: 15px;
+  color: #323238;
+}
+.dev-profile .dev-carroussels-skills {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.dev-profile .dev-carroussels-skills li {
+  width: 150px;
+  height: 200px;
+  border: 1px solid #29292e;
+  border-radius: 4px;
+  background: linear-gradient(#00B37E, #8D8D99, #00B37E);
+  box-shadow: 0px 0px 5px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+
+  font-size: 24px;
+  font-weight: bold;
+}
+.dev-profile .dev-carroussels-skills li:hover {
+  background: transparent;
+}
+.dev-profile .arrows {
+  position: absolute;
+  top: 40%;
+  font-size: 35px;
+  color: #00B37E;
+}
+.dev-profile .arrow-right {
+  right: 0px;
+}
+.dev-profile .arrow-left {
+  left: 0px;
 }

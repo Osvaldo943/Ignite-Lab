@@ -1,4 +1,4 @@
-import { Square,AddressBook, Barbell, Code, EyedropperSample, FacebookLogo, GithubLogo, InstagramLogo, LinkedinLogo, PhoneCall } from "phosphor-react"
+import { Square,AddressBook, Barbell, Code, EyedropperSample, FacebookLogo, GithubLogo, InstagramLogo, LinkedinLogo, PhoneCall, ArrowArcLeft, ArrowLeft, ArrowCircleDownLeft, ArrowCircleLeft, ArrowCircleRight } from "phosphor-react"
 import {Header} from "../components/Header"
 import {Link} from "react-router-dom"
 import AvatarProfile from "../assets/avatar-profile.jpg"
@@ -16,13 +16,13 @@ export function DevProfile(){
           </div>
           <ul className="dev-info-profile">
             <li>
-              <Link to="">
+              <Link to="https://github.com/Osvaldo943/">
                 <span><GithubLogo /></span>
                 <p>Visit my GitHub</p>
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to="https://www.linkedin.com/in/osvaldo-de-sousa-01a937206/">
                 <span><LinkedinLogo /></span>
                 <p>Visit my linkdein</p>
               </Link>
@@ -55,26 +55,25 @@ export function DevProfile(){
               <span><i><Code /> </i> DLine-Code</span>
             </div>
           </div>
-          <ul className="dev-carroussels-skills">
-            <li>
-              <Link to="">HMTL</Link>
-            </li>
-            <li>
-              <Link to="">CSS</Link>
-            </li>
-            <li>
-              <Link to="">JavaScript</Link>
-            </li>
-            <li>
-              <Link to="">React</Link>
-            </li>
-            <li>
-              <Link to="">Next JS</Link>
-            </li>
-            <li>
-              <Link to="">TypeScript</Link>
-            </li>
+          <div className="dev-skills">
+            <p>Skills</p>
+            <ul className="dev-carroussels-skills">
+            <i><ArrowCircleLeft className="arrows arrow-left"/></i>
+            <Link to="">
+              <li>HTML </li>
+            </Link>
+            <Link to="">
+              <li>CSS </li>
+            </Link>
+            <Link to="">
+              <li>JavaScript </li>
+            </Link>
+            <Link to="">
+              <li>React </li>
+            </Link>
+            <i className="arrows arrow-right"><ArrowCircleRight/></i>
           </ul>
+          </div>
         </div>
       </div>
     </div>
