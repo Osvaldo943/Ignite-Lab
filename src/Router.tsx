@@ -1,5 +1,8 @@
 import { Route, Routes } from "react-router-dom";
+<<<<<<< HEAD
 import { DevProfile } from "./pages/devProfile";
+=======
+>>>>>>> main
 import { Event } from "./pages/event";
 import { Subscribe } from "./pages/subscribe";
 
