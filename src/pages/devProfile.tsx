@@ -6,7 +6,7 @@ import AvatarProfile from "../assets/avatar-profile.jpg"
 export function DevProfile(){
   return(
     <div className="dev-profile">
-      <Header />
+      <Header /> 
       <div className="container">
         <div className="left-profile">
           <div className="image-profile">
